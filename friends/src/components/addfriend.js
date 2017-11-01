@@ -14,7 +14,7 @@ class AddFriend extends Component {
         this.addFriend = this.addFriend.bind(this);
         this.updateNewName = this.updateNewName.bind(this);
         this.updateNewAge = this.updateNewAge.bind(this); 
-        this.updateNewEmail = this.updateNewEmail.bind(this)
+        this.updateNewEmail = this.updateNewEmail.bind(this);
     }
 
     addFriend(event) {
@@ -33,17 +33,17 @@ class AddFriend extends Component {
 
     updateNewName(event){
         this.setState({
-            newName: event.target.name,
+            newName: event.target.value,
         });
     }
     updateNewAge(event){
         this.setState({
-            newAge: event.target.age,
+            newAge: event.target.value,
         });
     }
     updateNewEmail(event){
         this.setState({
-            newEmail: event.target.email
+            newEmail: event.target.value
         });
     }
 
@@ -55,19 +55,19 @@ class AddFriend extends Component {
                     <input 
                         onChange={this.updateNewName}
                         placeholder='Friend Name'
-                        name={this.state.newName}
+                        value={this.state.newName}
                     />
                     <input
                         onChange={this.updateNewAge}
                         placeholder='Friend Age'
-                        age={this.state.newAge}
+                        value={this.state.newAge}
                     />
                     <input
                         onChange={this.updateNewEmail}
                         placeholder='Friend Email'
-                        email={this.state.newEmail}
+                        value={this.state.newEmail}
                     />
-                    <button type="submit">Submit</button>
+                    <button>Submit</button>
                 </form>
             </div>
         );

@@ -14,9 +14,9 @@ export const getFriends = () => {
 };
 
 export const addFriend = (friend) => {
-    const friendsEndpoint = 'http://localhost:5000/friends';
-    const newFriend = axios.post(friendsEndpoint, friend);
-    const friends = axios.get(friendsEndpoint);
+    const friendsEndpoint = 'http://localhost:5000/new-friend';
+    const friends = axios.post(friendsEndpoint, friend);
+
 
     return {
         type: ADD_FRIEND,
